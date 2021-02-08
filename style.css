@@ -236,12 +236,12 @@ img {
     color: white;
     position: relative;
     border: none;
-    filter: opacity(0.7) grayscale(100%);
+    filter: blur(2px);
     transition: 0.5s;
 }
 
 .social img:hover {
-    filter: opacity(1) grayscale(0%);
+    filter: blur(0px);
 }
 
 .social img:active {
