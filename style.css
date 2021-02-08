@@ -236,7 +236,7 @@ img {
     color: white;
     position: relative;
     border: none;
-    filter: blur(2px);
+    filter: blur(3.5px);
     transition: 0.5s;
 }
 
@@ -283,6 +283,7 @@ img {
     .social img {
         height: 30px;
         width: 30px;
+        filter: blur(0px);
     }
     #youtube {
         width: 43px;
