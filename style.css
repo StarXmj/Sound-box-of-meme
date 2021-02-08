@@ -77,9 +77,14 @@ body {
 
 header {
     width: 100%;
-    height: 10vh;
+    height: 19vh;
+    margin: 0 auto;
     align-items: center top;
     justify-content: center top;
+    animation-duration: 58s;
+    animation-name: font;
+    animation-iteration-count: infinite;
+    box-shadow: black 0px 3px 20px 0px;
 }
 
 .container {
@@ -88,8 +93,9 @@ header {
     height: 56vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-gap: 20px;
+    grid-gap: 50px;
     margin: 7vh auto;
+    margin-top: 5%;
 }
 
 .box {
@@ -174,14 +180,63 @@ img {
 }
 
 .stopsong {
-    position: relative;
-    width: 100%;
-    height: 10vh;
+    position: absolute;
+    top: 7%;
+    left: 50%;
 }
 
 .stopsong img {
+    width: 70px;
+    height: 70px;
+    transition: 0.5s;
+}
+
+.stopsong img:hover {
+    cursor: pointer;
+    width: 75px;
+    height: 75px;
+}
+
+.stopsong img:active {
+    cursor: pointer;
     width: 50px;
     height: 50px;
+    transition: 0.2s;
+}
+
+.social {
+    position: relative;
+    width: 25%;
+    height: 0vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5px, 1fr));
+    grid-gap: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    top: 15%;
+}
+
+.social img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 41px;
+    color: white;
+    position: relative;
+    border: none;
+    filter: opacity(0.7) grayscale(100%);
+    transition: 0.5s;
+}
+
+.social img:hover {
+    filter: opacity(1) grayscale(0%);
+}
+
+.social img:active {
+    height: 30px;
+    width: 31px;
+    transition: 0.2s;
 }
 
 @media screen and (max-width:800px) {
@@ -193,7 +248,7 @@ img {
     .container {
         grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
         grid-gap: 20px;
-        margin: 3vh auto;
+        margin: 10vh auto;
     }
     p {
         font-size: 10px;
@@ -206,6 +261,14 @@ img {
     }
     .box {
         height: 120px;
+    }
+    .social {
+        width: 50%;
+        grid-gap: 25px;
+    }
+    .social img {
+        height: 25px;
+        width: 25px;
     }
 }
 
